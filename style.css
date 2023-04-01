@@ -1,0 +1,69 @@
+#rim {
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+#center {
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+#hours {
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    width: 5px;
+    height: calc(500px / 2 - 20px);
+    left: 50%;
+    top: 50%;
+    transform-origin: 50% 0%;
+    transform: translate(-50%, 0%) rotate(0deg);
+    animation: clockHand 43200s infinite linear;
+    z-index: 1;
+}
+
+#minutes {
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    width: 5px;
+    height: calc(500px / 2 - 70px);
+    left: 50%;
+    top: 50%;
+    transform-origin: 50% 0%;
+    transform: translate(-50%, 0%) rotate(0deg);
+    animation: clockHand 3600s infinite linear;
+}
+
+#seconds {
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    width: 5px;
+    height: calc(500px / 2 - 50px);
+    left: 50%;
+    top: 50%;
+    transform-origin: 50% 0%;
+    transform: translate(-50%, 0%) rotate(0deg);
+    animation: clockHand 60s infinite linear;
+    z-index: 2;
+}
+
+@keyframes clockHand {
+    from {
+        transform: translate(-50%, 0%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, 0%) rotate(360deg);
+    }
+}
