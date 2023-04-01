@@ -27,8 +27,7 @@
     left: 50%;
     top: 50%;
     transform-origin: 50% 0%;
-    transform: translate(-50%, 0%) rotate(0deg);
-    animation: clockHand 43200s infinite linear;
+    transform: translate(-50%, 0%) rotate(180deg);
     z-index: 1;
 }
 
@@ -41,8 +40,7 @@
     left: 50%;
     top: 50%;
     transform-origin: 50% 0%;
-    transform: translate(-50%, 0%) rotate(0deg);
-    animation: clockHand 3600s infinite linear;
+    transform: translate(-50%, 0%) rotate(180deg);
 }
 
 #seconds {
@@ -54,15 +52,11 @@
     left: 50%;
     top: 50%;
     transform-origin: 50% 0%;
-    transform: translate(-50%, 0%) rotate(0deg);
-    animation: clockHand 60s infinite linear;
+    transform: translate(-50%, 0%) rotate(180deg);
     z-index: 2;
 }
 
 @keyframes clockHand {
-    from {
-        transform: translate(-50%, 0%) rotate(0deg);
-    }
     to {
         transform: translate(-50%, 0%) rotate(360deg);
     }
