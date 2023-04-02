@@ -56,6 +56,24 @@
     z-index: 2;
 }
 
+.stroke {
+    position: absolute;
+    width: 5px;
+    left: 50%;
+    top: 50%;
+    transform-origin: 50% 0%;
+}
+
+.stroke div:first-child {
+    background-color: transparent;
+    height: calc(500px / 2 - 15px);
+}
+
+.stroke div:last-child {
+    background-color: black;
+    height: 10px;
+}
+
 @keyframes clockHand {
     to {
         transform: translate(-50%, 0%) rotate(360deg);

@@ -19,3 +19,14 @@ class Timer {
         seconds.style.animation = "initial";
     }
 }
+
+for (let i = 0, angle = 0; i < 60; i++, angle += 6) {
+    let stroke = document.createElement("div");
+    stroke.className = "stroke";
+    
+    stroke.append(document.createElement("div"));
+    stroke.append(document.createElement("div"));
+    rim.append(stroke);
+    
+    stroke.style.transform = `translate(-50%, 0%) rotate(${angle}deg)`;
+}
