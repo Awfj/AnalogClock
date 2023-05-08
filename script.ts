@@ -1,13 +1,15 @@
-"use strict"
+class TimerTS {
+    private static readonly hours: HTMLElement =
+        document.querySelector("#hours")!;
+    private static readonly minutes: HTMLElement =
+        document.querySelector("#hours")!;
+    private static readonly seconds: HTMLElement =
+        document.querySelector("#hours")!;
 
-class Timer {
-    static hours = document.querySelector("#hours");
-    static minutes = document.querySelector("#hours");
-    static seconds = document.querySelector("#hours");
-
-    static Run() {
+    static Run(): void {
         this.hours.style.animation = "clockHand 43200s infinite linear running";
-        this.minutes.style.animation = "clockHand 3600s infinite linear running";
+        this.minutes.style.animation =
+            "clockHand 3600s infinite linear running";
         this.seconds.style.animation = "clockHand 60s infinite linear running";
     }
 
