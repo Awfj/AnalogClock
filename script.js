@@ -24,6 +24,8 @@ class Timer {
     }
 }
 
+let s = new Timer();
+
 for (let i = 0, angle = 0; i < 60; i++, angle += 6) {
     let rim = document.querySelector("#rim");
 
@@ -32,6 +34,6 @@ for (let i = 0, angle = 0; i < 60; i++, angle += 6) {
     
     stroke.append(document.createElement("div"));
     stroke.append(document.createElement("div"));
-    rim?.append(stroke);
+    rim.append(stroke);
     stroke.style.transform = `translate(-50%, 0%) rotate(${angle}deg)`;
 }
